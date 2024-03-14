@@ -4,23 +4,19 @@ var router = express.Router();
 
 /* GET users listing. */
 router.get('/', function (req, res, next) {
-    var x = Math.floor(Math.random());
-    var y = Math.floor(Math.random());
-
+    var x = (Math.random);
     console.log(x);
+
 
     if (req.query.x) {
         x = (req.query.x);
     }
 
-    function calculatingCeil(x, y) {
-        return (Math.ceil(x, y));
+    function ceil(x){
+        return Math.ceil(x)
     }
-
-
-    console.log(calculatingCeil(x,y));
-
-    res.send(`Math.ceil applied on ${x} and ${y} is ${calculatingCeil(x, y)}`)
+    console.log(ceil(x));
+    res.send(`Math.ceil applied on ${x} is ${ceil(x)}`);
 });
 
 module.exports = router;
