@@ -7,6 +7,8 @@ router.get('/', function (req, res, next) {
     var x = Math.floor(Math.random());
     var y = Math.floor(Math.random());
 
+    console.log(x);
+
     if (req.query.x) {
         x = (req.query.x);
     }
